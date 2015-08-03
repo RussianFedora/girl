@@ -1,25 +1,32 @@
-Name: girl
-Version: 6.0.0      
-Release: 1%{?dist}
-Summary: GNOME Internet Radio Locator program       
+Name:          girl
+Version:       6.0.0
+Release:       2%{?dist}
+Summary:       GNOME Internet Radio Locator
 
-License: GPLv2+       
-URL: http://www.ping.uio.no/~oka/src/girl/ 
-Source0: https://download.gnome.org/sources/girl/6.0/%{name}-%{version}.tar.xz        
-Patch0: girl-incorrect-fsf-address.patch    
+License:       GPLv2+
+URL:           https://wiki.gnome.org/Apps/Girl
+Source0:       https://download.gnome.org/sources/girl/6.0/%{name}-%{version}.tar.xz
+# https://bugzilla.gnome.org/show_bug.cgi?id=753044
+Patch0:        0001-trivial-update-FSF-address.patch
 
-BuildRequires: desktop-file-utils
-BuildRequires: libappstream-glib
-BuildRequires: gnome-vfs2-devel
-BuildRequires: libgnomeui-devel
-BuildRequires: libgnome-devel
-BuildRequires: libxml2-devel
-BuildRequires: gtk2-devel
+# for autosetup -S git
+BuildRequires: git-core
+# main deps
+BuildRequires: gcc
+BuildRequires: pkgconfig(gtk+-2.0)
+BuildRequires: pkgconfig(glib-2.0)
+BuildRequires: pkgconfig(libgnomeui-2.0)
+BuildRequires: pkgconfig(libxml-2.0)
+BuildRequires: pkgconfig(gnome-vfs-2.0)
+BuildRequires: pkgconfig(libgnomeui-2.0)
 BuildRequires: intltool
 BuildRequires: itstool
+# check
+BuildRequires: /usr/bin/desktop-file-validate
+BuildRequires: /usr/bin/appstream-util
 
-Requires: streamripper
-Requires: totem 
+Requires:      streamripper
+Requires:      totem
 
 %description
 GIRL is a GNOME Internet Radio Locator program that allows the user
@@ -30,25 +37,21 @@ GIRL is developed on the GNOME platform and it requires at least
 one audio player such as Videos to be installed for playback and
 streamripper for recording.
 
-Enjoy Internet Radio.
-
 %prep
-%setup -q
-%patch0 -p1
+%autosetup -S git
 
 %build
 %configure
 %make_build
 
 %install
-rm -rf $RPM_BUILD_ROOT
 %make_install
 
 %find_lang %{name}
 
 %check
-appstream-util validate-relax --nonet %{buildroot}/%{_datadir}/appdata/%{name}.appdata.xml
-desktop-file-validate %{buildroot}/%{_datadir}/applications/%{name}.desktop
+appstream-util validate-relax --nonet %{buildroot}%{_datadir}/appdata/%{name}.appdata.xml
+desktop-file-validate %{buildroot}%{_datadir}/applications/%{name}.desktop
 
 %post
 update-desktop-database &> /dev/null || :
@@ -65,8 +68,8 @@ fi
 gtk-update-icon-cache %{_datadir}/icons/hicolor &> /dev/null || :
 
 %files -f %{name}.lang
-%doc AUTHORS LETTER NEWS README TODO VERSION YP-DIRS ChangeLog
 %license COPYING
+%doc AUTHORS LETTER NEWS README TODO VERSION YP-DIRS ChangeLog
 %{_bindir}/%{name}
 %{_datadir}/%{name}/
 %{_datadir}/appdata/%{name}.appdata.xml
@@ -76,5 +79,8 @@ gtk-update-icon-cache %{_datadir}/icons/hicolor &> /dev/null || :
 %{_datadir}/help/*/%{name}/*
 
 %changelog
+* Mon Aug 03 2015 Igor Gnatenko <ignatenkobrain@fedoraproject.org> - 6.0.0-2
+- Fixes many issues and cleanups in spec
+
 * Mon Aug  3 2015 Maxim Orlov <murmansksity@gmail.com> - 6.0.0-1
 - Initial package.
