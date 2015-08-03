@@ -1,0 +1,217 @@
+diff -Naur girl-6.0.0.orig/src/girl-station.h girl-6.0.0/src/girl-station.h
+--- girl-6.0.0.orig/src/girl-station.h	2015-03-28 20:05:37.000000000 +0300
++++ girl-6.0.0/src/girl-station.h	2015-08-02 23:11:00.826914287 +0300
+@@ -18,7 +18,7 @@
+  *
+  * You should have received a copy of the GNU General Public License
+  * along with this program; if not, write to the Free Software
+- * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307, USA.
++ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+  */
+ 
+ #ifndef GIRL_STATION_H
+
+diff -Naur girl-6.0.0.orig/src/girl-runners.h girl-6.0.0/src/girl-runners.h
+--- girl-6.0.0.orig/src/girl-runners.h	2015-01-01 15:10:06.000000000 +0300
++++ girl-6.0.0/src/girl-runners.h	2015-08-02 23:15:40.532562152 +0300
+@@ -18,7 +18,7 @@
+  *
+  * You should have received a copy of the GNU General Public License
+  * along with this program; if not, write to the Free Software
+- * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307, USA.
++ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+  */
+ 
+ #ifndef GIRL_RUNNERS_H
+
+diff -Naur girl-6.0.0.orig/src/girl-station.c girl-6.0.0/src/girl-station.c
+--- girl-6.0.0.orig/src/girl-station.c	2015-03-28 19:43:36.000000000 +0300
++++ girl-6.0.0/src/girl-station.c	2015-08-02 23:18:25.725716569 +0300
+@@ -18,7 +18,7 @@
+  *
+  * You should have received a copy of the GNU General Public License
+  * along with this program; if not, write to the Free Software
+- * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307, USA.
++ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+  */
+ 
+ #include <config.h>
+
+diff -Naur girl-6.0.0.orig/src/girl-tz.c girl-6.0.0/src/girl-tz.c
+--- girl-6.0.0.orig/src/girl-tz.c  2015-05-06 12:58:27.000000000 +0300
++++ girl-6.0.0/src/girl-tz.c	   2015-08-02 23:20:52.141626689 +0300
+@@ -19,7 +19,7 @@
+  *
+  * You should have received a copy of the GNU General Public License
+  * along with this program; if not, write to the Free Software
+- * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307, USA.
++ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+  *
+  */
+
+diff -Naur girl-6.0.0.orig/src/girl-tz.h girl-6.0.0/src/girl-tz.h
+--- girl-6.0.0.orig/src/girl-tz.h  2015-05-06 12:58:39.000000000 +0300
++++ girl-6.0.0/src/girl-tz.h	   2015-08-02 23:23:22.690590733 +0300
+@@ -19,7 +19,7 @@
+  *
+  * You should have received a copy of the GNU General Public License
+  * along with this program; if not, write to the Free Software
+- * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307, USA.
++ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+  *
+  */
+
+diff -Naur girl-6.0.0.orig/src/girl-program.h girl-6.0.0/src/girl-program.h
+--- girl-6.0.0.orig/src/girl-program.h	2015-05-04 19:19:52.000000000 +0300
++++ girl-6.0.0/src/girl-program.h	2015-08-02 23:25:44.210436983 +0300
+@@ -18,7 +18,7 @@
+  *
+  * You should have received a copy of the GNU General Public License
+  * along with this program; if not, write to the Free Software
+- * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307, USA.
++ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+  */
+ 
+ #ifndef GIRL_PROGRAM_H
+
+diff -Naur girl-6.0.0.orig/src/girl-streams.h girl-6.0.0/src/girl-streams.h
+--- girl-6.0.0.orig/src/girl-streams.h	2015-01-01 15:28:55.000000000 +0300
++++ girl-6.0.0/src/girl-streams.h	2015-08-02 23:27:56.379161239 +0300
+@@ -18,7 +18,7 @@
+  *
+  * You should have received a copy of the GNU General Public License
+  * along with this program; if not, write to the Free Software
+- * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307, USA.
++ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+  */
+ 
+ #ifndef GIRL_STREAMS_H
+
+diff -Naur girl-6.0.0.orig/src/girl.h girl-6.0.0/src/girl.h
+--- girl-6.0.0.orig/src/girl.h	2015-05-05 14:11:30.000000000 +0300
++++ girl-6.0.0/src/girl.h	2015-08-02 23:30:06.706861478 +0300
+@@ -18,7 +18,7 @@
+  *
+  * You should have received a copy of the GNU General Public License
+  * along with this program; if not, write to the Free Software
+- * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307, USA.
++ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+  */
+ 
+ #ifndef GIRL_H
+
+diff -Naur girl-6.0.0.orig/src/girl-streams.c girl-6.0.0/src/girl-streams.c
+--- girl-6.0.0.orig/src/girl-streams.c	2015-01-01 15:31:50.000000000 +0300
++++ girl-6.0.0/src/girl-streams.c	2015-08-02 23:32:26.446684507 +0300
+@@ -18,7 +18,7 @@
+  *
+  * You should have received a copy of the GNU General Public License
+  * along with this program; if not, write to the Free Software
+- * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307, USA.
++ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+  */
+ 
+ #include <config.h>
+
+diff -Naur girl-6.0.0.orig/src/girl-program.c girl-6.0.0/src/girl-program.c
+--- girl-6.0.0.orig/src/girl-program.c	2015-03-07 05:40:55.000000000 +0300
++++ girl-6.0.0/src/girl-program.c	2015-08-03 11:01:12.734322399 +0300
+@@ -18,7 +18,7 @@
+  *
+  * You should have received a copy of the GNU General Public License
+  * along with this program; if not, write to the Free Software
+- * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307, USA.
++ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+  */
+ 
+ #include <config.h>
+
+diff -Naur girl-6.0.0.orig/src/girl.c girl-6.0.0/src/girl.c
+--- girl-6.0.0.orig/src/girl.c	2015-06-23 00:27:57.000000000 +0300
++++ girl-6.0.0/src/girl.c	2015-08-03 11:03:19.481752868 +0300
+@@ -18,7 +18,7 @@
+  *
+  * You should have received a copy of the GNU General Public License
+  * along with this program; if not, write to the Free Software
+- * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307, USA.
++ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+  */
+ 
+ #include <config.h>
+
+diff -Naur girl-6.0.0.orig/src/girl-runners.c girl-6.0.0/src/girl-runners.c
+--- girl-6.0.0.orig/src/girl-runners.c	2015-01-01 15:11:47.000000000 +0300
++++ girl-6.0.0/src/girl-runners.c	2015-08-03 11:05:22.326036205 +0300
+@@ -18,7 +18,7 @@
+  *
+  * You should have received a copy of the GNU General Public License
+  * along with this program; if not, write to the Free Software
+- * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307, USA.
++ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+  */
+ 
+ #include "girl.h"
+
+diff -Naur girl-6.0.0.orig/src/girl-gui.c girl-6.0.0/src/girl-gui.c
+--- girl-6.0.0.orig/src/girl-gui.c  2015-05-06 11:26:59.000000000 +0300
++++ girl-6.0.0/src/girl-gui.c	    2015-08-03 11:07:39.546486587 +0300
+@@ -18,7 +18,7 @@
+  *
+  * You should have received a copy of the GNU General Public License
+  * along with this program; if not, write to the Free Software
+- * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307, USA.
++ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+  */
+ 
+ #include <stdio.h>
+
+diff -Naur girl-6.0.0.orig/src/girl-stations-map.c girl-6.0.0/src/girl-stations-map.c
+--- girl-6.0.0.orig/src/girl-stations-map.c  2015-05-06 12:56:57.000000000 +0300
++++ girl-6.0.0/src/girl-stations-map.c	     2015-08-03 11:09:58.979485733 +0300
+@@ -18,7 +18,7 @@
+  *
+  * You should have received a copy of the GNU General Public License
+  * along with this program; if not, write to the Free Software
+- * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307, USA.
++ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+  *
+  */
+ 
+diff -Naur girl-6.0.0.orig/src/girl-stations-map.h girl-6.0.0/src/girl-stations-map.h
+--- girl-6.0.0.orig/src/girl-stations-map.h  2015-05-06 12:57:18.000000000 +0300
++++ girl-6.0.0/src/girl-stations-map.h	     2015-08-03 11:10:09.772648100 +0300
+@@ -18,7 +18,7 @@
+  *
+  * You should have received a copy of the GNU General Public License
+  * along with this program; if not, write to the Free Software
+- * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307, USA.
++ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+  *
+  */
+
+diff -Naur girl-6.0.0.orig/src/girl-listener.c girl-6.0.0/src/girl-listener.c
+--- girl-6.0.0.orig/src/girl-listener.c  2015-03-07 05:40:55.000000000 +0300
++++ girl-6.0.0/src/girl-listener.c	 2015-08-03 11:13:32.043426521 +0300
+@@ -18,7 +18,7 @@
+  *
+  * You should have received a copy of the GNU General Public License
+  * along with this program; if not, write to the Free Software
+- * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307, USA.
++ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+  */
+ 
+ #include <stdio.h>
+
+diff -Naur girl-6.0.0.orig/src/girl-listener.h girl-6.0.0/src/girl-listener.h
+--- girl-6.0.0.orig/src/girl-listener.h  2015-03-07 05:40:55.000000000 +0300
++++ girl-6.0.0/src/girl-listener.h	 2015-08-03 11:13:43.704770262 +0300
+@@ -18,7 +18,7 @@
+  *
+  * You should have received a copy of the GNU General Public License
+  * along with this program; if not, write to the Free Software
+- * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307, USA.
++ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+  */
+ 
+ #ifndef GIRL_LISTENER_H
+
