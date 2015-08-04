@@ -1,6 +1,6 @@
 Name:          girl
 Version:       6.0.0
-Release:       2%{?dist}
+Release:       3%{?dist}
 Summary:       GNOME Internet Radio Locator
 
 License:       GPLv2+
@@ -18,6 +18,7 @@ BuildRequires: pkgconfig(glib-2.0)
 BuildRequires: pkgconfig(libgnomeui-2.0)
 BuildRequires: pkgconfig(libxml-2.0)
 BuildRequires: pkgconfig(gnome-vfs-2.0)
+BuildRequires: pkgconfig(libgnome-2.0)
 BuildRequires: intltool
 BuildRequires: itstool
 # check
@@ -78,6 +79,10 @@ gtk-update-icon-cache %{_datadir}/icons/hicolor &> /dev/null || :
 %{_datadir}/help/*/%{name}/*
 
 %changelog
+* Tue Aug 04 2015 Maxim Orlov <murmansksity@gmail.com> - 6.0.0-3
+- Changing release number
+- Add BuildRequires: pkgconfig(libgnome-2.0)
+
 * Mon Aug 03 2015 Igor Gnatenko <ignatenkobrain@fedoraproject.org> - 6.0.0-2
 - Fixes many issues and cleanups in spec
 
