@@ -18,7 +18,6 @@ BuildRequires: pkgconfig(glib-2.0)
 BuildRequires: pkgconfig(libgnomeui-2.0)
 BuildRequires: pkgconfig(libxml-2.0)
 BuildRequires: pkgconfig(gnome-vfs-2.0)
-BuildRequires: pkgconfig(libgnomeui-2.0)
 BuildRequires: intltool
 BuildRequires: itstool
 # check
