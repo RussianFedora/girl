@@ -1,24 +1,23 @@
 Name:          girl
-Version:       7.0.0
+Version:       8.0.0
 Release:       1%{?dist}
 Summary:       GNOME Internet Radio Locator
 
 License:       GPLv2+
 URL:           https://wiki.gnome.org/Apps/Girl
-Source0:       https://download.gnome.org/sources/%{name}/7.0/%{name}-%{version}.tar.xz
+Source0:       https://download.gnome.org/sources/%{name}/8.0/%{name}-%{version}.tar.xz
 # main dependencies
-BuildRequires: gcc
-BuildRequires: pkgconfig(gtk+-2.0)
 BuildRequires: pkgconfig(glib-2.0)
+BuildRequires: pkgconfig(gnome-vfs-2.0)
+BuildRequires: pkgconfig(gtk+-2.0)
+BuildRequires: pkgconfig(libgnome-2.0)
 BuildRequires: pkgconfig(libgnomeui-2.0)
 BuildRequires: pkgconfig(libxml-2.0)
-BuildRequires: pkgconfig(gnome-vfs-2.0)
-BuildRequires: pkgconfig(libgnome-2.0)
 BuildRequires: intltool
 BuildRequires: itstool
 # check
-BuildRequires: /usr/bin/desktop-file-validate
 BuildRequires: /usr/bin/appstream-util
+BuildRequires: /usr/bin/desktop-file-validate
 
 Recommends:    streamripper
 Requires:      totem
@@ -66,13 +65,16 @@ fi
 %license COPYING
 %doc AUTHORS LETTER NEWS README TODO VERSION YP-DIRS ChangeLog THANKS
 %{_bindir}/%{name}
-%{_datadir}/%{name}/
+%{_datadir}/%{name}
 %{_datadir}/appdata/%{name}.appdata.xml
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/icons/hicolor/*/apps/%{name}.png
 %{_mandir}/man1/%{name}.1*
 
 %changelog
+* Sun Jan 17 2016 Maxim Orlov <murmansksity@gmail.com> - 8.0.0-1.R
+- Update to 8.0.0
+
 * Thu Jan 07 2016 Maxim Orlov <murmansksity@gmail.com> - 7.0.0-1.R
 - Update to 7.0.0
 
@@ -80,7 +82,7 @@ fi
 - Update to 6.1.0
 
 * Tue Aug 04 2015 Maxim Orlov <murmansksity@gmail.com> - 6.0.0-3
-- Add BuildRequires: pkgconfig(libgnome-2.0)
+- Add BR: pkgconfig(libgnome-2.0)
 
 * Mon Aug 03 2015 Igor Gnatenko <ignatenkobrain@fedoraproject.org> - 6.0.0-2
 - Fixes many issues and cleanups in spec
