@@ -1,11 +1,11 @@
 Name:          girl
-Version:       8.0.0
+Version:       8.4.0
 Release:       1%{?dist}
 Summary:       GNOME Internet Radio Locator
 
 License:       GPLv2+
 URL:           https://wiki.gnome.org/Apps/Girl
-Source0:       https://download.gnome.org/sources/%{name}/8.0/%{name}-%{version}.tar.xz
+Source0:       https://download.gnome.org/sources/%{name}/8.4/%{name}-%{version}.tar.xz
 # main dependencies
 BuildRequires: pkgconfig(glib-2.0)
 BuildRequires: pkgconfig(gnome-vfs-2.0)
@@ -72,6 +72,9 @@ fi
 %{_mandir}/man1/%{name}.1*
 
 %changelog
+* Sun Apr 03 2016 Maxim Orlov <murmansksity@gmail.com> - 8.4.0-1.R
+- Update to 8.4.0
+
 * Sun Jan 17 2016 Maxim Orlov <murmansksity@gmail.com> - 8.0.0-1.R
 - Update to 8.0.0
 
