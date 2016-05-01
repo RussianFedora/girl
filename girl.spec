@@ -1,24 +1,23 @@
 Name:          girl
-Version:       8.4.1
+Version:       8.4.2
 Release:       1%{?dist}
 Summary:       GNOME Internet Radio Locator
 
 License:       GPLv2+
 URL:           https://wiki.gnome.org/Apps/Girl
 Source0:       https://download.gnome.org/sources/%{name}/8.4/%{name}-%{version}.tar.xz
-
+# main dependencies
 BuildRequires: gcc
+BuildRequires: desktop-file-utils
 BuildRequires: pkgconfig(glib-2.0)
 BuildRequires: pkgconfig(gnome-vfs-2.0)
 BuildRequires: pkgconfig(gtk+-2.0)
+BuildRequires: libappstream-glib
 BuildRequires: pkgconfig(libgnome-2.0)
 BuildRequires: pkgconfig(libgnomeui-2.0)
 BuildRequires: pkgconfig(libxml-2.0)
 BuildRequires: intltool
 BuildRequires: itstool
-# check
-BuildRequires: /usr/bin/appstream-util
-BuildRequires: /usr/bin/desktop-file-validate
 
 Recommends:    streamripper
 Requires:      totem
@@ -73,6 +72,9 @@ fi
 %{_mandir}/man1/%{name}.1*
 
 %changelog
+* Sun May 01 2016 Maxim Orlov <murmansksity@gmail.com> - 8.4.2-1.R
+- Update to 8.4.2
+
 * Wed Apr 27 2016 Maxim Orlov <murmansksity@gmail.com> - 8.4.1-1.R
 - Update to 8.4.1
 
