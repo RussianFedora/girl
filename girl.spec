@@ -1,26 +1,25 @@
-Name:          girl
-Version:       8.4.2
-Release:       1%{?dist}
-Summary:       GNOME Internet Radio Locator
+Name:           girl
+Version:        9.0.0
+Release:        1%{?dist}
+Summary:        GNOME Internet Radio Locator
 
-License:       GPLv2+
-URL:           https://wiki.gnome.org/Apps/Girl
-Source0:       https://download.gnome.org/sources/%{name}/8.4/%{name}-%{version}.tar.xz
-# main dependencies
-BuildRequires: gcc
-BuildRequires: desktop-file-utils
-BuildRequires: pkgconfig(glib-2.0)
-BuildRequires: pkgconfig(gnome-vfs-2.0)
-BuildRequires: pkgconfig(gtk+-2.0)
-BuildRequires: libappstream-glib
-BuildRequires: pkgconfig(libgnome-2.0)
-BuildRequires: pkgconfig(libgnomeui-2.0)
-BuildRequires: pkgconfig(libxml-2.0)
-BuildRequires: intltool
-BuildRequires: itstool
-
-Recommends:    streamripper
-Requires:      totem
+License:        GPLv2+
+URL:            https://wiki.gnome.org/Apps/Girl
+Source0:        https://download.gnome.org/sources/%{name}/9.0/%{name}-%{version}.tar.xz
+# Main dependencies
+BuildRequires:  gcc
+BuildRequires:  desktop-file-utils
+BuildRequires:  pkgconfig(glib-2.0)
+BuildRequires:  pkgconfig(gnome-vfs-2.0)
+BuildRequires:  pkgconfig(gtk+-2.0)
+BuildRequires:  intltool >= 0.50.1
+BuildRequires:  itstool
+BuildRequires:  libappstream-glib
+BuildRequires:  pkgconfig(libgnome-2.0)
+BuildRequires:  pkgconfig(libgnomeui-2.0)
+BuildRequires:  pkgconfig(libxml-2.0)
+Recommends:     streamripper
+Requires:       totem
 
 %description
 GIRL is a GNOME Internet Radio Locator program that allows the user
@@ -41,7 +40,7 @@ streamripper for recording.
 %install
 %make_install
 
-%find_lang %{name} --with-gnome
+%find_lang %{name}
 
 %check
 appstream-util validate-relax --nonet %{buildroot}%{_datadir}/appdata/%{name}.appdata.xml
@@ -68,10 +67,14 @@ fi
 %{_datadir}/%{name}
 %{_datadir}/appdata/%{name}.appdata.xml
 %{_datadir}/applications/%{name}.desktop
+%{_datadir}/help/*/%{name}
 %{_datadir}/icons/hicolor/*/apps/%{name}.png
 %{_mandir}/man1/%{name}.1*
 
 %changelog
+* Sat May 21 2016 Maxim Orlov <murmansksity@gmail.com> - 9.0.0-1.R
+- Update to 9.0.0
+
 * Sun May 01 2016 Maxim Orlov <murmansksity@gmail.com> - 8.4.2-1.R
 - Update to 8.4.2
 
