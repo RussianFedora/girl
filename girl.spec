@@ -1,11 +1,11 @@
 Name:           girl
-Version:        9.2.0
+Version:        9.3.0
 Release:        1%{?dist}
 Summary:        GNOME Internet Radio Locator
 
 License:        GPLv2+
 URL:            https://wiki.gnome.org/Apps/Girl
-Source0:        https://download.gnome.org/sources/%{name}/9.2/%{name}-%{version}.tar.xz
+Source0:        https://download.gnome.org/sources/%{name}/9.3/%{name}-%{version}.tar.xz
 # Main dependencies
 BuildRequires:  gcc
 BuildRequires:  desktop-file-utils
@@ -72,6 +72,9 @@ fi
 %{_mandir}/man1/%{name}.1*
 
 %changelog
+* Sat Jun 25 2016 Maxim Orlov <murmansksity@gmail.com> - 9.3.0-1.R
+- Update to 9.3.0
+
 * Sat Jun 11 2016 Maxim Orlov <murmansksity@gmail.com> - 9.2.0-1.R
 - Update to 9.2.0
 
