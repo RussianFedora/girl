@@ -1,11 +1,11 @@
 Name:           girl
-Version:        9.3.0
+Version:        9.4.0
 Release:        1%{?dist}
 Summary:        GNOME Internet Radio Locator
 
 License:        GPLv2+
 URL:            https://wiki.gnome.org/Apps/Girl
-Source0:        https://download.gnome.org/sources/%{name}/9.3/%{name}-%{version}.tar.xz
+Source0:        https://download.gnome.org/sources/%{name}/9.4/%{name}-%{version}.tar.xz
 # Main dependencies
 BuildRequires:  gcc
 BuildRequires:  desktop-file-utils
@@ -19,6 +19,7 @@ BuildRequires:  pkgconfig(libgnome-2.0)
 BuildRequires:  pkgconfig(libgnomeui-2.0)
 BuildRequires:  pkgconfig(libxml-2.0)
 Recommends:     streamripper
+Requires:       hicolor-icon-theme
 Requires:       totem
 
 %description
@@ -72,6 +73,10 @@ fi
 %{_mandir}/man1/%{name}.1*
 
 %changelog
+* Thu Jul 07 2016 Maxim Orlov <murmansksity@gmail.com> - 9.4.0-1.R
+- Update to 9.4.0
+- Add R: hicolor-icon-theme
+
 * Sat Jun 25 2016 Maxim Orlov <murmansksity@gmail.com> - 9.3.0-1.R
 - Update to 9.3.0
 
