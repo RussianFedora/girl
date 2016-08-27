@@ -1,5 +1,5 @@
 Name:           girl
-Version:        9.5.0
+Version:        9.5.1
 Release:        1%{?dist}
 Summary:        GNOME Internet Radio Locator
 
@@ -73,6 +73,9 @@ fi
 %{_mandir}/man1/%{name}.1*
 
 %changelog
+* Sat Aug 27 2016 Maxim Orlov <murmansksity@gmail.com> - 9.5.1-1.R
+- Update to 9.5.1
+
 * Mon Aug 15 2016 Maxim Orlov <murmansksity@gmail.com> - 9.5.0-1.R
 - Update to 9.5.0
 
